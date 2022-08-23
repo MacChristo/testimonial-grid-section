@@ -39,20 +39,30 @@ main {
   border-radius: 10px;
 }
 
+figure {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
 .daniel {
   background: linear-gradient(180deg, hsl(263deg 55% 52%), hsl(263deg 78% 71%));
   background-image: url(./bg-pattern-quotation.svg);
   background-color: var(--moderate-violet--);
   background-repeat: no-repeat;
-  background-position: top right 15px;
+  background-position: top right 30px;
   margin-bottom: 1.5625em;
   box-shadow: 0px 5px 7px 3px hsl(0deg 0% 81%);
 }
 
 .jonathan {
-background: var(--very-dark-grayish-blue--);
+  background: var(--very-dark-grayish-blue--);
   margin-bottom: 1.5625em;
   box-shadow: 0px 5px 7px 3px hsl(0deg 0% 81%);
+}
+
+.jonathan .avatar {
+  border: solid hsl(300 1% 34%) 2px;
 }
 
 .jeanette {
@@ -61,10 +71,18 @@ background: var(--very-dark-grayish-blue--);
   box-shadow: 0px 5px 7px 3px hsl(0deg 0% 81%);
 }
 
+.jeanette .avatar {
+  border: solid var(--white--) 2px;
+}
+
 .patrick {
   background: var(--very-dark-blackish-blue--);
   margin-bottom: 1.5625em;
   box-shadow: 0px 5px 7px 3px hsl(0deg 0% 81%);
+}
+
+.patrick .avatar {
+  border: solid hsl(263deg 55% 52%) 2px;
 }
 
 .kira {
@@ -72,14 +90,21 @@ background: var(--very-dark-grayish-blue--);
   margin-bottom: 1.5625em;
   box-shadow: 0px 5px 7px 3px hsl(0deg 0% 81%);
 }
+
+.kira .avatar {
+  border: solid var(--white--) 2px;
+}
+
 .card {
   padding: 1em 2em;
   color: var(--white--);
   font-size: var(--light-font-size--);
 }
+
 .kira .card {
   color: var(--very-dark-grayish-blue--);
 }
+
 .jeanette .card {
   color: var(--very-dark-grayish-blue--);
 }
@@ -88,33 +113,40 @@ background: var(--very-dark-grayish-blue--);
   display: flex;
   align-items: center;
 }
+
 .avatar {
   border-radius: 100px;
   border: solid hsl(300 23% 69%) 2px;
   width: 35px;
   margin-right: 0.9375em;
 }
+
 .avatar-info h2 {
   margin: 0.625em 0 0 0;
   font-size: 0.8125rem;
   font-weight: 500;
 }
+
 .avatar-info p {
   margin-top: 0;
   opacity: 50%;
 }
+
 .bold-text {
   font-weight: 600;
   font-size: 1.25rem;
   margin-top: 0;
 }
+
 .quote-text {
   opacity: 70%;
   font-weight: 500;
 }
-.footer { 
+
+.footer {
   position: absolute;
 }
+
 .attribution {
   text-align: center;
   font-size: 0.625rem;
@@ -131,37 +163,50 @@ background: var(--very-dark-grayish-blue--);
     line-height: 1.3;
     position: relative;
   }
+
   main {
     padding: 2em;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     max-width: 1110px;
     margin: 2.5rem;
     row-gap: 24px;
     column-gap: 30px;
   }
+
   .container {
     width: 100%;
   }
+
   .daniel {
     grid-column: span 2;
   }
+
   .jeanette {
     grid-column: 1;
     grid-row: 2;
   }
+
   .patrick {
     grid-column: span 2;
   }
+
   .kira {
+    grid-row-start: 1;
     grid-column: 4;
-    grid-row: span 2;
+    grid-row-end: 3;
   }
 
   .footer {
     display: none;
   }
-  .daniel, .jonathan, .jeanette, .patrick, .kira {
+
+  .daniel,
+  .jonathan,
+  .jeanette,
+  .patrick,
+  .kira {
     margin-bottom: 0;
   }
 }
