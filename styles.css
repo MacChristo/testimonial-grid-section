@@ -8,7 +8,6 @@
   --attribution-color--: hsl(228, 45%, 44%);
   --light-font-size--: 0.8125rem;
   --big-font-size--: 1.125rem;
-  --font-family--: font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
 *,
@@ -19,8 +18,7 @@
 
 body {
   background: hsl(210 7% 87%);
-  font-family: var(--font-family--);
-  font-size: var(--light-font-size--);
+  font-family: 'Barlow Semi Condensed', sans-serif;  
   display: flex;
   flex-direction: column;
   justify-content: space-between;
